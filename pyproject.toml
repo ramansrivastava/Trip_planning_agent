@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "trip-planner-crew"
+version = "0.1.0"
+description = "simple ai trip planner"
+authors = ["Raman"]
+
+[tool.poetry.dependencies]
+python = ">=3.10.0,<3.13"
+crewai = "^0.11.0"
+unstructured = "==0.10.25"
+pyowm = "3.3.0"
+python-dotenv = "1.0.0"
+pydantic = "^2.5.0"
+langchain = "^0.1.0"
+langchain-google-genai = "^0.0.6"
+
+[tool.pyright]
+useLibraryCodeForTypes = true
+exclude = [".cache"]
+
+[tool.ruff]
+select = ['E', 'W', 'F', 'I', 'B', 'C4', 'ARG', 'SIM']
+ignore = ['W291', 'W292', 'W293']
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
